@@ -6,7 +6,7 @@ on:
 
 jobs:
   pipeline:
-    uses: KubeGuardd/kubeguard-main/.github/workflows/dev-pipeline.yml@main
+    uses: KubeGuardd/kubeguard-main/.github/workflows/dev-pipeline.yaml@main
     with:
       service_name: kubeguard-gateway
       dockerfile_path: ./Dockerfile
