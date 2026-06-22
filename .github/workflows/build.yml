@@ -8,7 +8,7 @@ jobs:
   pipeline:
     uses: KubeGuardd/kubeguard-main/.github/workflows/dev-pipeline.yaml@main
     with:
-      service_name: kubeguard-gateway
+      service_name: gateway
       dockerfile_path: ./Dockerfile
       build_context: .
       working_directory: .
@@ -26,4 +26,3 @@ jobs:
       SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
       SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}      
 
-      
