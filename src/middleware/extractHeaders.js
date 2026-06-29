@@ -8,7 +8,7 @@ const extractHeaders = (req, res, next) => {
     : user.roles || ''
 
   // TEMP FIX: allow any valid Entra tenant user as Admin
-  if ('true' === 'true') {
+  if (process.env.ALLOW_ALL_ENTRA_USERS === 'true') {
     roles = roles ? `${roles},Admin` : 'Admin'
   }
 
